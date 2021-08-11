@@ -1,4 +1,3 @@
-const port = 3000;
 const os = require('os');
 const checkDiskSpace = require('check-disk-space').default;
 const GB = 1024 ** 3;
