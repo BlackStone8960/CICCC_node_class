@@ -1,0 +1,14 @@
+{
+  "name": "cli_status_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cliStatusApp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "check-disk-space": "^3.0.1"
+  }
+}
