@@ -3,6 +3,7 @@ const app = express();
 const os = require('os');
 const checkDiskSpace = require('check-disk-space').default;
 const port = 5500;
+const GB = 1024 ** 3;
 
 app.get('/', (req, res) => {
   res.send('Input URL as "/api/the information you want to know".');
@@ -17,13 +18,18 @@ app.get('/api/cpus', (req, res) => {
 })
 
 app.get('/api/ram', (req, res) => {
-  const totalMemory = String(os.totalmem());
-  res.send(`Your PC's memory is: ${totalMemory}`);
+  res.send(`
+    Your PC's total memory is ${os.totalmem() / GB} GB.
+    Free memory is ${os.freemem() / GB} GB.
+  `);
 })
 
 app.get('/api/diskspace', (req, res) => {
   checkDiskSpace('C:/').then(diskSpace => {
-    res.send(`Your PC's disk space in C drive is: ${diskSpace}`);
+    res.send(`
+      Your PC's total disk space in C drive is ${diskSpace.size / GB} GB.
+      Free disk space is ${diskSpace.free / GB} GB.
+    `);
   })
 });
 
