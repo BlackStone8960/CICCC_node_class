@@ -1,0 +1,11 @@
+{
+  "name": "http_site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "http_site.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Taichi Ishiguro",
+  "license": "ISC"
+}
