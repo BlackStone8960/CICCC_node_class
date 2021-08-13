@@ -1,0 +1,15 @@
+{
+  "name": "check-os-spec",
+  "version": "1.0.0",
+  "description": "This package will check the specification of your OS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Taichi Ishiguro",
+  "license": "ISC",
+  "dependencies": {
+    "check-disk-space": "^3.0.1",
+    "express": "^4.17.1"
+  }
+}
