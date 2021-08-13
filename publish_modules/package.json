@@ -1,6 +1,6 @@
 {
   "name": "check-os-spec",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "This package will check the specification of your OS.",
   "main": "index.js",
   "scripts": {
