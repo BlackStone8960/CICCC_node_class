@@ -1,4 +1,5 @@
-const fs = require('fs');
+// const fs = require('fs');
+const fs = require('fs-extra');
 const prompts = require('prompts');
 const arg1 = process.argv[2];
 const arg2 = process.argv[3];
@@ -69,6 +70,18 @@ const main = () => {
         if (err) { throw err; }
         console.log(`Copied file from ${arg2} to ${arg3}!`);
       })
+      break;
+    case '--copy':
+      fs.copy(arg2, arg3, err => {
+        if (err) { throw err; }
+        console.log(`Copied file from ${arg2} to ${arg3}!`);
+      });
+      break;
+    case '--mkdirs':
+      fs.mkdirs(arg2, err => {
+        if (err) { throw err; }
+        console.log(`Made ${arg2}!`);
+      });
       break;
     case '--size':
       const stat = fs.statSync(arg2);
